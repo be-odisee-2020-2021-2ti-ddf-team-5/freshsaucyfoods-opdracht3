@@ -1,7 +1,7 @@
 <template>
 
   <div id="bestelling">
-  <div id="image">
+    <div id="image">
     <img alt="Logo fsf" src="../assets/LogoFreshSaucyFoods.png" style="float: left; height: 3em" />
   </div>
     <main-form/>

@@ -1,5 +1,5 @@
 <template>
-<p>Fresh Saucy Foods - Yarne - Iejan - Abdel - Amine - Samiullah - Bram</p>
+  <p>Fresh Saucy Foods - Yarne - Iejan - Abdel - Amine - Samiullah - Bram</p>
 </template>
 
 <script>

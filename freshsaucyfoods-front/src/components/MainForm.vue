@@ -1,6 +1,6 @@
 <template>
   <div id="">
-    <input type="hidden" id="id" name="id" value="0" />
+    <input type="hidden" id="id" name="id" value="0"/>
 
     <div class="form-group">
       <label for="title">Titel:&nbsp;</label><br><input id="title" name="title" type="text" style="width: 40em" v-model="bestellingData.title" placeholder="[Bestelling 1]" /><br>

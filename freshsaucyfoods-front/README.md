@@ -1,6 +1,7 @@
 # freshsaucyfoods-front
 
 ## Project setup
+
 ```
 npm install
 ```

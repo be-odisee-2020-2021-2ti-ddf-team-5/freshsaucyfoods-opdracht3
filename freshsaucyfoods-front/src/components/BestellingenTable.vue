@@ -1,5 +1,5 @@
 <template>
-  <div v-if="bestellingen.length != 0" class="table-striped well" >
+  <div v-if="bestellingen.length != 0" class="table-striped well">
     <div class="row">
       <div class="col-md-1 text-uppercase text-primary text-left font-weight-bold">#</div>
       <div class="col-md-2 text-uppercase text-primary  text-left">Naam</div>

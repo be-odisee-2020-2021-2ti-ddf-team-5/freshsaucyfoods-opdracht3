@@ -56,7 +56,6 @@ public class Bestelling implements Serializable {
 	 *
 	 * @param berschrijving
 	 * @param titel
-	 * @param bereidingswijze
 	 */
 	public void addProefstaaltje(String berschrijving, String titel){
 

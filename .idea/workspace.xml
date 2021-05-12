@@ -5,25 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60e62ccc-4628-4de6-a2f7-bbf8dad30985" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bestellingApi/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/RepositoryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/UserApiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/controller/BestellingRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/controller/PersoonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/dao/PersoonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/domain/Bestelling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/domain/Persoon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/service/PersoonService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/service/PersoonServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bestellingApi/src/test/java/be/odisee/team5/userapi/UserApiApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/BestellingApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/BestellingApiApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +30,11 @@
     <property name="editorconfig.notification" value="lf;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/service" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -57,6 +43,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Iejan\Documents\GitHub\freshsaucyfoods-opdracht3\bestellingApi\src\main\java\be\odisee\team5\bestellingApi\service" />
+      <recent name="D:\Users\Iejan\Documents\GitHub\freshsaucyfoods-opdracht3\bestellingApi\src\main\java\be\odisee\team5\bestellingApi\dao" />
       <recent name="D:\Users\Iejan\Documents\GitHub\freshsaucyfoods-opdracht3\bestellingApi\src\main\java\be\odisee\team5\bestellingApi\controller" />
       <recent name="D:\Users\Iejan\Documents\GitHub\freshsaucyfoods-opdracht3\bestellingApi" />
     </key>
@@ -74,7 +62,7 @@
       <updated>1620675278495</updated>
       <workItem from="1620675281198" duration="672000" />
       <workItem from="1620829401114" duration="191000" />
-      <workItem from="1620830072423" duration="879000" />
+      <workItem from="1620830072423" duration="1902000" />
     </task>
     <servers />
   </component>

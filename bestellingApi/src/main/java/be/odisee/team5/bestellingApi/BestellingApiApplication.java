@@ -23,23 +23,23 @@ public class UserApiApplication {
 	 * @return
 	 */
 	@Bean
-	CommandLineRunner init(PersoonRepository personRepository){
-		Persoon p = new Persoon();
-		p.setRole("ROLE_USER");
-		p.setNaam("Jef");
-		p.setFamilienaam("Lokers");
-		p.setPassword("12345");
-		p.setEmailadress("jef.lokers@hotmail.com");
+	CommandLineRunner init(BestellingRepository bestellingRepository){
+		Bestelling b = new Bestelling();
+		b.setTitel("Eerste bestelling");
+		b.setAantalLiterBesteld(10);
+		b.setDatumStartproductie(LocalDate.now());
+		b.setVooruitgang("In Productie");
+		b.setVoorafAfgesprokenEindDatum(LocalDate.now().plusMonths(1));
+
+		Bestelling b2 = new Bestelling();
+		b.setTitel("Tweede bestelling");
+		b.setAantalLiterBesteld(50);
+		b.setDatumStartproductie(LocalDate.now());
+		b.setVooruitgang("In Productie");
+		b.setVoorafAfgesprokenEindDatum(LocalDate.now().plusMonths(2));
 
 
-		Persoon p2 = new Persoon();
-		p2.setRole("ROLE_ADMIN");
-		p2.setNaam("Tom");
-		p2.setFamilienaam("Berens");
-		p2.setPassword("1");
-		p2.setEmailadress("tom.berens@hotmail.com");
-
-		return (evt) -> {personRepository.save(p);personRepository.save(p2);};
+		return (evt) -> {bestellingRepository.save(b);};
 	}
 
 }

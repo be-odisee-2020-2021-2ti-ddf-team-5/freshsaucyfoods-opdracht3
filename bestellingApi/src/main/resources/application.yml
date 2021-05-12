@@ -1,6 +1,6 @@
 spring:
     datasource:
-      url: jdbc:mysql://localhost/fsfuserdb
+      url: jdbc:mysql://localhost/fsfuserdb1
       username: fsfAdmin
       password: fsfPas
     jpa:

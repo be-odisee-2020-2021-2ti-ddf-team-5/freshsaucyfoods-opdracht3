@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       |
       <a><router-link to="/bestelling">Bestelling</router-link></a> |
+      <a><router-link to="/persoon">Persoon</router-link></a> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="bestellingen.length != 0" class="table-striped well">
+  <div v-if="bestellingen.length !== 0" class="table-striped well my-5">
     <div class="row">
       <div class="col-md-1 text-uppercase text-primary text-left font-weight-bold">#</div>
       <div class="col-md-2 text-uppercase text-primary  text-left">Naam</div>
@@ -9,17 +9,16 @@
       <div class="col-md-2 text-left text-primary text-uppercase ">Start productie</div>
     </div>
     <div v-for="bestelling in bestellingen" class="row" v-bind:key="bestelling.id"
-         v-on:click="showEntryDetails(bestelling.id)"  >
+         v-on:click="showBestellingDetails(bestelling.id)"  >
       <div class="col-md-1 text-left" >
         {{bestelling.id}}
       </div>
       <div class="col-md-2 text-left titeltoegevoegd" >
-        {{bestelling.title}}
+        {{bestelling.titel}}
       </div>
       <div class="col-md-2 text-left" >
-        {{bestelling.aantalLiter}}
+        {{bestelling.aantalLiterBesteld}}
       </div>
-
 
       <div v-if="bestelling.vooruitgang ==='Klaar'">
         <div class="col-md-2 text-left bg-success" >
@@ -47,10 +46,10 @@
         </div>
       </div>
       <div class="col-md-2 text-left" >
-        {{bestelling.leverDatum}}
+        {{bestelling.eindDate}}
       </div>
       <div class="col-md-2 text-left" >
-        {{bestelling.startProductie}}
+        {{bestelling.datumStartproductie}}
       </div>
     </div>
   </div>
@@ -60,9 +59,10 @@
 import axios from "axios";
 
 async function getBestellingen(){
-  const url = '';
+  const url = 'http://localhost:8080/bestellingen';
   let result = (await axios.get(url , {withCredentials : true})).data;
   return result;
+
 }
 
 export default {
@@ -70,13 +70,20 @@ export default {
 
   data (){
     return {
-      "bestellingen" : []
+      "bestellingen" : [],
+
     }
   },
   created() {
     var result = getBestellingen();
     result.then((res) => this.bestellingen = res)
-  }
+
+  },
+  methods: {
+    showBestellingDetails(bestellingId) {
+      window.location.href = "/bestelling/"+bestellingId;
+    }
+  },
 }
 </script>
 

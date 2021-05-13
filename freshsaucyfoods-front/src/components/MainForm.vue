@@ -23,13 +23,17 @@
     <div class="form-group"  v-if="bestellingData.id === 0">
       <button class="btn btn-primary btn-md" name="submit">Create Bestelling</button>
     </div>
-    <div v-if="bestellingData.id !== 0" class="form-group">
-      <button class="btn btn-primary btn-md" name="submit">Update bestelling</button>
-      <div v-if="bestellingData.id !== 0">
-        <button class="btn btn-default btn-md" name="inplannen">Bestelling inplannen</button>
-        <button class="btn btn-danger btn-md" name="delete">Delete bestelling</button>
-      </div>
+    <div v-if="bestellingData.id === 0" class="form-group my-4">
+      <button v-on:click="submitForm" class="btn btn-primary btn-md" name="submit">Create bestelling</button>
+
+    </div>
+    <div v-if="bestellingData.id !== 0" class="form-group my-4">
+      <button v-on:click="submitForm" class="btn btn-primary btn-md" name="submit">Update bestelling</button>
+      <button  class="btn btn-default btn-md" name="inplannen">Bestelling inplannen</button>
+      <button v-on:click="deleteBestelling" class="btn btn-danger btn-md" name="delete">Delete bestelling</button>
       <button class="btn btn-warning btn-md" name="cancel">Cancel</button>
+
+
     </div>
     <bestellingen-table   ></bestellingen-table>
   </div>

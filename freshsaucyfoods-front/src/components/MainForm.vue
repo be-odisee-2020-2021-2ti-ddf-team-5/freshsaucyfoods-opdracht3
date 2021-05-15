@@ -1,5 +1,5 @@
 <template>
-  <div id="">
+  <div id="bestelmlingForm">
     <input type="hidden" id="id" name="id" value="0"/>
 
     <div class="form-group">
@@ -19,9 +19,6 @@
     </div>
     <div v-if="bestellingData.id !== 0" class="form-group">
       <label for="startProductie">Start productie datum&nbsp;</label><br><input id="startProductie" name="startProductie" type="date" style="width: 40em" v-model="bestellingData.startProductie" />
-    </div>
-    <div class="form-group"  v-if="bestellingData.id === 0">
-      <button class="btn btn-primary btn-md" name="submit">Create Bestelling</button>
     </div>
     <div v-if="bestellingData.id === 0" class="form-group my-4">
       <button v-on:click="submitForm" class="btn btn-primary btn-md" name="submit">Create bestelling</button>
@@ -67,7 +64,7 @@ export default {
     let url;
     if(this.$route.params.id != null){
       url = 'http://localhost:8080/bestellingen';
-      this.message = "Wijzig, verwijder of plan een bestellin in - of annuleer";
+      this.message = "Wijzig, verwijder of plan een bestelling in - of annuleer";
     }
     else {
       url = 'http://localhost:8080/bestellingen';
@@ -103,10 +100,6 @@ export default {
           .then( (response) => {
             this.message = response.data;
             this.componentKey += 1;
-
-            // this.bestellingData.startTime =
-            //
-            // this.bestellingData.endTime =
 
             if (this.bestellingData.id !== 0) {
               this.bestellingData.id = 0; // klaar voor nieuwe entry nu

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'  // HV mag weg later als ik HelloWorld wegwil
 import Bestelling from '../views/Bestelling.vue'
+import Persoon from "../views/Persoon";
 
 Vue.use(VueRouter);
 
@@ -21,9 +22,24 @@ const routes = [
         component: Bestelling
     },
     {
+        path: '/bestelling/:bestellingId',
+        name: 'Bestelling',
+        component: Bestelling
+    },
+    {
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/persoon',
+        name: 'Persoon',
+        component: Persoon
+    },
+    {
+        path: '/persoon/:persoonId',
+        name: 'Persoon',
+        component: Persoon
     }
 ];
 

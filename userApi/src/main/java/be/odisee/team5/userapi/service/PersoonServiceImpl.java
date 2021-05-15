@@ -5,6 +5,8 @@ import be.odisee.team5.userapi.domain.Persoon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersoonServiceImpl implements PersoonService{
 
@@ -43,5 +45,10 @@ public class PersoonServiceImpl implements PersoonService{
     @Override
     public void deletePersoon(int id) {
         persoonRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Persoon> getAllPersonen() {
+        return (List<Persoon>) persoonRepository.findAll();
     }
 }

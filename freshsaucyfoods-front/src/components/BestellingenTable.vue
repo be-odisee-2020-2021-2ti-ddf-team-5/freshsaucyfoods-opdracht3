@@ -19,32 +19,21 @@
       <div class="col-md-2 text-left" >
         {{bestelling.aantalLiterBesteld}}
       </div>
-
-      <div v-if="bestelling.vooruitgang ==='Klaar'">
-        <div class="col-md-2 text-left bg-success" >
+        <div v-if="bestelling.vooruitgang ==='Klaar'" class="col-md-2 text-left bg-success" >
           {{bestelling.vooruitgang}}
         </div>
-      </div>
-      <div v-if="bestelling.vooruitgang ==='Aangemaakt'">
-        <div class="col-md-2 text-left bg-info"  >
+        <div v-if="bestelling.vooruitgang ==='Aangemaakt'" class="col-md-2 text-left bg-info"  >
           {{bestelling.vooruitgang}}
         </div>
-      </div>
-      <div v-if="bestelling.vooruitgang ==='Weiger'">
-        <div class="col-md-2 text-left bg-danger"  >
+        <div v-if="bestelling.vooruitgang ==='Weiger'" class="col-md-2 text-left bg-danger"  >
           {{bestelling.vooruitgang}}
         </div>
-      </div>
-      <div v-if="bestelling.vooruitgang ==='In Productie'">
-        <div class="col-md-2 text-left bg-warning"  >
+        <div v-if="bestelling.vooruitgang ==='In Productie'" class="col-md-2 text-left bg-warning"  >
           {{bestelling.vooruitgang}}
         </div>
-      </div>
-      <div v-else>
-        <div class="col-md-2 text-left"  >
+        <div v-else class="col-md-2 text-left"  >
           {{bestelling.vooruitgang}}
         </div>
-      </div>
       <div class="col-md-2 text-left" >
         {{bestelling.eindDate}}
       </div>

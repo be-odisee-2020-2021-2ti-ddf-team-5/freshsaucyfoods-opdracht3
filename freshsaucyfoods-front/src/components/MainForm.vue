@@ -3,32 +3,31 @@
     <input type="hidden" id="id" name="id" value="0"/>
 
     <div class="form-group">
-      <label for="title">Titel:&nbsp;</label><br><input id="title" name="title" type="text" style="width: 40em" v-model="bestellingData.title" placeholder="[Bestelling 1]" /><br>
+      <label for="title">Titel:&nbsp;</label><br><input id="title" name="title" type="text" style="width: 40em" v-model="bestellingData.titel" placeholder="[Bestelling 1]" /><br>
       <span class="validationError" ></span>
     </div>
     <div class="form-group">
-      <label for="aantalLiter">Aantal liter:&nbsp;</label><br><input id="aantalLiter" name="aantalLiter" type="number" style="width: 40em" v-model="bestellingData.aantalLiter"  /><br>
+      <label for="aantalLiter">Aantal liter:&nbsp;</label><br><input id="aantalLiter" name="aantalLiter" type="number" style="width: 40em" v-model="bestellingData.aantalLiterBesteld"  /><br>
       <span class="validationError"  ></span>
     </div>
     <div class="form-group">
-      <label for="leverDatum">Gewenste lever datum:&nbsp;</label><br><input id="leverDatum" name="leverDatum" type="date" style="width: 40em" v-model="bestellingData.leverDatum" /><br>
+      <label for="leverDatum">Gewenste lever datum:&nbsp;</label><br><input id="leverDatum" name="leverDatum" type="date" style="width: 40em" v-model="bestellingData.voorafAfgesprokenEindDatum" /><br>
       <span class="validationError" ></span>
     </div>
-    <div v-if="bestellingData.id !== 0" >
+    <div v-if="this.$route.params.id != null" >
       <label for="vooruitgang">Vooruitgang&nbsp;</label><br><input id="vooruitgang" name="vooruitgang" type="text" style="width: 40em" v-model="bestellingData.vooruitgang"/>
     </div>
-    <div v-if="bestellingData.id !== 0" class="form-group">
-      <label for="startProductie">Start productie datum&nbsp;</label><br><input id="startProductie" name="startProductie" type="date" style="width: 40em" v-model="bestellingData.startProductie" />
+    <div v-if="this.$route.params.id != null" class="form-group">
+      <label for="startProductie">Start productie datum&nbsp;</label><br><input id="startProductie" name="startProductie" type="date" style="width: 40em" v-model="bestellingData.datumStartproductie" />
     </div>
-    <div v-if="bestellingData.id === 0" class="form-group my-4">
+    <div v-if="this.$route.params.id == null" class="form-group my-4">
       <button v-on:click="submitForm" class="btn btn-primary btn-md" name="submit">Create bestelling</button>
 
     </div>
-    <div v-if="bestellingData.id !== 0" class="form-group my-4">
+    <div v-if="this.$route.params.id != null" class="form-group my-4">
       <button v-on:click="submitForm" class="btn btn-primary btn-md" name="submit">Update bestelling</button>
-      <button  class="btn btn-default btn-md" name="inplannen">Bestelling inplannen</button>
       <button v-on:click="deleteBestelling" class="btn btn-danger btn-md" name="delete">Delete bestelling</button>
-      <button class="btn btn-warning btn-md" name="cancel">Cancel</button>
+      <button v-on:click="cancel" class="btn btn-warning btn-md" name="cancel">Cancel</button>
 
 
     </div>
@@ -50,11 +49,11 @@ export default {
     return {
       "bestellingData": {
         "id": 0,
-        "title": "",
-        "aantalLiter" : 0,
-        "leverDatum" : moment().format("YYYY-MM-DD") ,
+        "titel": "",
+        "aantalLiterBesteld" : 0,
+        "voorafAfgesprokenEindDatum" : moment().format("YYYY-MM-DD") ,
         "vooruitgang" : "",
-        "startProductie": moment().format("YYYY-MM-DD"),
+        "datumStartproductie": moment().format("YYYY-MM-DD"),
       },
       "message" : "Maak aub een bestelling aan",
       "componentKey" : 0,
@@ -72,7 +71,10 @@ export default {
 
     axios.get(url , {withCredentials : true})
         .then((response) => {
-          this.bestellingData = response.data;
+          if(url !== 'http://localhost:8080/bestellingen'){
+            this.persoonData = response.data;
+          }
+          console.log(this.persoonData);
           if(response.status === 204){
             this.newForm();
           }
@@ -91,11 +93,18 @@ export default {
   methods : {
     //update en creëren in een
     submitForm : function () {
-      const url = "http://localhost:8080/bestelling/" + this.bestellingData.id;
+      let url = '';
+
+      if(this.$route.params.id != null){
+        url = "http://localhost:8080/bestelling/" + this.$route.params.id;
+      }
+      else {
+        url = "http://localhost:8080/createBestelling";
+      }
       const headers = {
         withCredentials: true
       };
-
+      console.log(this.bestellingData)
       axios.post(url, this.bestellingData, headers)
           .then( (response) => {
             this.message = response.data;
@@ -111,7 +120,7 @@ export default {
           });
     },
     deleteBestelling : function () {
-      const url = "http://localhost:8080/bestelling/" + this.bestellingData.id;
+      const url = "http://localhost:8080/bestelling/" + this.$route.params.id;
       const headers = {
         withCredentials: true
       };
@@ -132,6 +141,9 @@ export default {
               console.log(error.message);
             }
           });
+    },
+    cancel : function(){
+      window.location.href = "/bestelling";
     },
     newForm: function () {
       // redirect for newEntryData but after some delay

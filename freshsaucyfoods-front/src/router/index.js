@@ -22,7 +22,7 @@ const routes = [
         component: Bestelling
     },
     {
-        path: '/bestelling/:bestellingId',
+        path: '/bestelling/:id',
         name: 'Bestelling',
         component: Bestelling
     },

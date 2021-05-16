@@ -27,7 +27,7 @@ public class PersoonController {
         return persoonService.getPersoonDetailsById(id);
     }
 
-    @RequestMapping (path = "updatePersoon/{id}", method = RequestMethod.PUT)
+    @RequestMapping (path = "updatePersoon/{id}", method = RequestMethod.POST)
     Persoon persoon (@RequestBody Persoon persoon){
         persoonService.processPersoon(persoon);
         return persoon;
@@ -38,7 +38,7 @@ public class PersoonController {
         return  persoonService.getAllPersonen();
     }
 
-    @RequestMapping (path = "createPersoon/{id}", method = RequestMethod.POST)
+    @RequestMapping (path = "createPersoon", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void createPersoon(@RequestBody Persoon persoon){
         persoonService.processPersoon(persoon);

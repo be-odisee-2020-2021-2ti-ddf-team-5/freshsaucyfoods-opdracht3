@@ -7,18 +7,18 @@
       <span class="validationError" ></span>
     </div>
     <div class="form-group">
-      <label for="aantalLiter">Aantal liter:&nbsp;</label><br><input id="aantalLiter" name="aantalLiter" type="number" style="width: 40em" v-model="bestellingData.aantalLiterBesteld"  /><br>
+      <label for="aantalLiter">Aantal liter:&nbsp;</label><br><input id="aantalLiter" name="aantalLiter" type="number" style="width: 40em" v-model="bestellingData.aantalLiter"  /><br>
       <span class="validationError"  ></span>
     </div>
     <div class="form-group">
-      <label for="leverDatum">Gewenste lever datum:&nbsp;</label><br><input id="leverDatum" name="leverDatum" type="date" style="width: 40em" v-model="bestellingData.voorafAfgesprokenEindDatum" /><br>
+      <label for="leverDatum">Gewenste lever datum:&nbsp;</label><br><input id="leverDatum" name="leverDatum" type="date" style="width: 40em" v-model="bestellingData.gewensteLeverdatum" /><br>
       <span class="validationError" ></span>
     </div>
     <div v-if="this.$route.params.id != null" >
       <label for="vooruitgang">Vooruitgang&nbsp;</label><br><input id="vooruitgang" name="vooruitgang" type="text" style="width: 40em" v-model="bestellingData.vooruitgang"/>
     </div>
     <div v-if="this.$route.params.id != null" class="form-group">
-      <label for="startProductie">Start productie datum&nbsp;</label><br><input id="startProductie" name="startProductie" type="date" style="width: 40em" v-model="bestellingData.datumStartproductie" />
+      <label for="startProductie">Start productie datum&nbsp;</label><br><input id="startProductie" name="startProductie" type="date" style="width: 40em" v-model="bestellingData.startProductieDate" />
     </div>
     <div v-if="this.$route.params.id == null" class="form-group my-4">
       <button v-on:click="submitForm" class="btn btn-primary btn-md" name="submit">Create bestelling</button>
@@ -50,10 +50,10 @@ export default {
       "bestellingData": {
         "id": 0,
         "titel": "",
-        "aantalLiterBesteld" : 0,
-        "voorafAfgesprokenEindDatum" : moment().format("YYYY-MM-DD") ,
+        "aantalLiter" : 0,
+        "gewensteLeverdatum" : moment().format("YYYY-MM-DD") ,
         "vooruitgang" : "",
-        "datumStartproductie": moment().format("YYYY-MM-DD"),
+        "startProductieDate": moment().format("YYYY-MM-DD"),
       },
       "message" : "Maak aub een bestelling aan",
       "componentKey" : 0,
@@ -101,13 +101,18 @@ export default {
       else {
         url = "http://localhost:8080/createBestelling";
       }
+      console.log(this.bestellingData);
+      console.log(this.bestellingData.id);
+
+      console.log(url);
+
       const headers = {
         withCredentials: true
       };
-      console.log(this.bestellingData)
+
       axios.post(url, this.bestellingData, headers)
           .then( (response) => {
-            this.message = response.data;
+            this.bestellingData = response.data;
             this.componentKey += 1;
 
             if (this.bestellingData.id !== 0) {
@@ -120,7 +125,7 @@ export default {
           });
     },
     deleteBestelling : function () {
-      const url = "http://localhost:8080/bestelling/" + this.$route.params.id;
+      const url = "http://localhost:8080/deleteBestelling/" + this.$route.params.id;
       const headers = {
         withCredentials: true
       };

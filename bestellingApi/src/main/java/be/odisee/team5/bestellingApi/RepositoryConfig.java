@@ -1,6 +1,6 @@
 package be.odisee.team5.bestellingApi;
 
-import be.odisee.team5.userapi.domain.Bestelling;
+import be.odisee.team5.bestellingApi.domain.Bestelling;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 

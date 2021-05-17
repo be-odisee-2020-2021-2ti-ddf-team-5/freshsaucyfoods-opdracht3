@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="172ffc80-6ad9-4119-8547-bac1d0d642ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/RepositoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/RepositoryConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/service/FreshSaucyFoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/service/FreshSaucyFoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userApi/src/main/java/be/odisee/team5/userapi/domain/Bestelling.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

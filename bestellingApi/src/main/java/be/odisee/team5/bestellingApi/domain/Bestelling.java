@@ -40,8 +40,6 @@ public class Bestelling implements Serializable {
 
 	public Bestelling(){}
 
-	@ManyToOne
-	public Persoon klant;
 
 
 	public void finalize() throws Throwable {

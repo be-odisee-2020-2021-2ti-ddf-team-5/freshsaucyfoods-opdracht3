@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
+    <list default="true" id="172ffc80-6ad9-4119-8547-bac1d0d642ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/BestellingApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/BestellingApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/domain/Bestelling.java" beforeDir="false" afterPath="$PROJECT_DIR$/bestellingApi/src/main/java/be/odisee/team5/bestellingApi/domain/Bestelling.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,13 +56,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="60e62ccc-4628-4de6-a2f7-bbf8dad30985" name="Default Changelist" comment="" />
+      <changelist id="172ffc80-6ad9-4119-8547-bac1d0d642ae" name="Default Changelist" comment="" />
       <created>1620675278495</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620675278495</updated>
       <workItem from="1620675281198" duration="672000" />
       <workItem from="1620829401114" duration="191000" />
+      <workItem from="1621236533274" duration="108000" />
     </task>
     <servers />
   </component>

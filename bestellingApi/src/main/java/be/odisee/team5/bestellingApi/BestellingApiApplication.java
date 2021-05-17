@@ -1,4 +1,4 @@
-package be.odisee.team5.userapi;
+package be.odisee.team5.fsfopdracht2;
 
 import be.odisee.team5.userapi.dao.PersoonRepository;
 import be.odisee.team5.userapi.domain.Persoon;
@@ -11,10 +11,10 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 
 @SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
 //@EnableGlobalMethodSecurity
-public class UserApiApplication {
+public class BestellingApiApplication {
 
     public static void main(String[] args) {
-		SpringApplication.run(UserApiApplication.class, args);
+		SpringApplication.run(BestellingApiApplication.class, args);
 	}
 
 	/**

@@ -119,14 +119,7 @@ public class FreshSaucyFoodsServiceImpl implements FreshSaucyFoodsService {
         return currentPrincipalName;
     }
 
-
-
-    @Override
-    public String getAuthenticatedFullname() {
-
-        Persoon theUser = findAuthenticatedPersoon();
-        return theUser.getVoornaam() +' '+ theUser.getFamilienaam();
-    }
+    
 
 
 }

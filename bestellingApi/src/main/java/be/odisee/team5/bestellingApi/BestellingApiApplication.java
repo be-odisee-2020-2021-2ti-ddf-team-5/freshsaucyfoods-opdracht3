@@ -1,7 +1,7 @@
 package be.odisee.team5.fsfopdracht2;
 
-import be.odisee.team5.userapi.dao.PersoonRepository;
-import be.odisee.team5.userapi.domain.Persoon;
+import be.odisee.team5.fsfopdracht2.dao.BestellingRepository;
+import be.odisee.team5.fsfopdracht2.domain.Bestelling;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

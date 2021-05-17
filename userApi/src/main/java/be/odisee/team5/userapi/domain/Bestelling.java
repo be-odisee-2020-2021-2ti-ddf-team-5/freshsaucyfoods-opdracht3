@@ -1,4 +1,4 @@
-package be.odisee.team5.userapi.domain;
+ackage be.odisee.team5.userapi.domain;
 
 import lombok.Data;
 

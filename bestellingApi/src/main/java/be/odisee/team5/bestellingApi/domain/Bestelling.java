@@ -15,8 +15,7 @@ import java.time.LocalDate;
  */
 @Data
 @Entity
-@Table()
-@XmlRootElement(name="Bestelling")
+@Table(name = "BESTELLINGEN")
 public class Bestelling implements Serializable {
 
 	@Column
@@ -59,43 +58,6 @@ public class Bestelling implements Serializable {
 	 */
 	public void addProefstaaltje(String berschrijving, String titel){
 
-	}
-
-	//Detail van een bestelling kunnen opvragen
-	@XmlElement(name = "bestellingDetail")
-	public String bestellingDetail() {
-		String bestellingDetail = "Titel Bestelling: " + titel + "\n" + "Aantal liter besteld: " + aantalLiterBesteld + "\n" + "Datum van plaatsen bestelling: " + datumStartproductie + "\n" + "De productie duurt al: " + duurProductie + "\n" + "De status van de bestelling: " +status + "\n" + "Verwachte einddatum: " + voorafAfgesprokenEindDatum;
-		return bestellingDetail;
-	}
-
-	@XmlElement(name = "duurProductie")
-	public String getDuurProductie(){
-		return duurProductie;
-	}
-	@XmlElement(name = "voorafAfgesprokenEindDatum")
-	public LocalDate getEindDate(){
-		return voorafAfgesprokenEindDatum;
-	}
-
-	@XmlElement(name = "id")
-	public long getId(){
-		return id;
-	}
-	@XmlElement(name = "titel")
-	public  String getTitel(){return titel;}
-	@XmlElement(name = "aantalLiterBesteld")
-	public int getLiterBesteld(){
-		return aantalLiterBesteld;
-	}
-
-	@XmlElement(name = "status")
-	public String getStatus(){
-		return status;
-	}
-
-	@XmlElement(name = "vooruitgang")
-	public String getVooruitgang(){
-		return vooruitgang;
 	}
 
 	/**

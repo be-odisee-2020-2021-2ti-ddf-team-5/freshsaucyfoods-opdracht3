@@ -1,4 +1,4 @@
-package be.odisee.team5.fsfopdracht2.controllers;
+package be.odisee.team5.fsfopdracht2.controller;
 
 import be.odisee.team5.fsfopdracht2.domain.Bestelling;
 import be.odisee.team5.fsfopdracht2.formdata.BestellingData;

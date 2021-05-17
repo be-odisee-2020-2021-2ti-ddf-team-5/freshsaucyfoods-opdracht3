@@ -1,9 +1,7 @@
 package be.odisee.team5.fsfopdracht2.service;
 
 import be.odisee.team5.fsfopdracht2.dao.BestellingRepository;
-import be.odisee.team5.fsfopdracht2.dao.PersonRepository;
 import be.odisee.team5.fsfopdracht2.domain.Bestelling;
-import be.odisee.team5.fsfopdracht2.domain.Persoon;
 import be.odisee.team5.fsfopdracht2.formdata.BestellingData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +21,6 @@ public class FreshSaucyFoodsServiceImpl implements FreshSaucyFoodsService {
     @Autowired
     private BestellingRepository bestellingRepository;
 
-    @Autowired
-    private PersonRepository personRepository;
 
     @Override
     public Object getObjectives() {
@@ -123,11 +119,7 @@ public class FreshSaucyFoodsServiceImpl implements FreshSaucyFoodsService {
         return currentPrincipalName;
     }
 
-    private Persoon findAuthenticatedPersoon() {
 
-        String email = getAuthenticatedUsername();
-        return personRepository.findPersoonByEmailadress(email);
-    }
 
     @Override
     public String getAuthenticatedFullname() {

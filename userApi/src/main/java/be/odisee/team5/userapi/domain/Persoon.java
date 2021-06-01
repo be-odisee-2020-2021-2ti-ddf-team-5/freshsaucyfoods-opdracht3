@@ -34,8 +34,6 @@ public class Persoon  {
 	private int status;
 	@Column
 	private String voornaam;
-	@OneToMany
-	private List<Bestelling> bestellingen;
 	@Column
 	private String role;
 
